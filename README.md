@@ -14,15 +14,20 @@ https://docs.matrix.io/
 Technical Guide to Create Mining Masternodes in Ubuntu (Linux) with Matrix AI Network
 https://docs.matrix.io/guides/create-mining-masternodes-in-ubuntu-linux-with-matrix-ai-network
 
+
 Create a Wallets
 https://docs.matrix.io/guides/create-a-portfolio
 
 
 ### Additional Support 
 This can be found in the official Matrix AI Network Telegram Groups and drMurlly's GitHub.
+
 https://t.me/matrixainetwork
+
 https://t.me/MatrixMasternodes
+
 https://github.com/drMurlly/Matrix-Mining
+
 
 
 ### About me
@@ -34,15 +39,22 @@ Matrix AI Staking with drMurlly
 Be a part of our exclusive community and gain early access to tips and reports to help you navigate your Matrix AI staking Journey! I am the creator of the Weekly Performance Report. The report includes 20+ pages of valuable data from Matrix AI Blockchain. Sign up for the list and receive a FREE report every Monday!
 https://stakematrixai.com/
 
+
 Calculate the estimated average return for fixed-staking methods
+
 https://stakematrixai.com/calculator/
 
+
 Matrix AI Network BrainWave. Ask the LLM model anything about Matrix AI Network!
+
 https://brainwave.stakematrixai.com/
 
 
+
 Follow me for Matrix AI Network updates and also various other web3-related topics!
+
 https://twitter.com/drMurlly
+
 https://twitter.com/MatrixAIStaking
 
 
