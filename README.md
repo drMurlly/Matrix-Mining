@@ -4,28 +4,32 @@ https://www.matrix.io/
 Matrix AI Network ($MAN) is a decentralized AI (Artificial Intelligence) platform combining blockchain technology with AI capabilities. It aims to create an ecosystem where AI and machine learning algorithms can be developed, deployed and incentivized securely and transparently. Matrix AI Network utilizes its own AI-driven blockchain to support various applications and services, including data analysis, intelligent contracts, and decentralized applications (dApps). The network also emphasizes privacy and security by implementing advanced encryption techniques. Matrix AI Network aims to revolutionize the AI industry by providing a decentralized and efficient platform for AI development and deployment.
 
 
+
 ### Matrix AI Network consensus mechanism
 Matrix AI Network uses a unique PoS + PoW hybrid consensus mechanism. In this mechanism, the Proof of Work (PoW) process is carried out in a smaller network of delegates. These delegates are selected using a random distributed voting algorithm, and the probability of a node being selected is proportional to its Proof of Stake (PoS). The selected delegate, the "winner" delegate, shares the PoW reward with other nodes in its cluster. This approach helps eliminate latency issues commonly arising when scaling blockchain networks. By combining the advantages of both PoS and PoW, MATRIX AI Network aims to achieve a more efficient and secure consensus mechanism. PoS helps to ensure that nodes with a higher stake in the network have a greater chance of being selected, while PoW helps maintain the blockchain's security and integrity. Overall, the hybrid PoS + PoW consensus mechanism employed by MATRIX AI Network enables the network to achieve high performance and scalability while maintaining a secure and decentralized system.
+
 
 
 ### Official DOCS 
 https://docs.matrix.io/
 
 Technical Guide to Create Mining Masternodes in Ubuntu (Linux) with Matrix AI Network
+
 https://docs.matrix.io/guides/create-mining-masternodes-in-ubuntu-linux-with-matrix-ai-network
 
 
+
 Create a Wallets
+
 https://docs.matrix.io/guides/create-a-portfolio
+
 
 
 ### Additional Support 
 This can be found in the official Matrix AI Network Telegram Groups and drMurlly's GitHub.
 
 https://t.me/matrixainetwork
-
 https://t.me/MatrixMasternodes
-
 https://github.com/drMurlly/Matrix-Mining
 
 
