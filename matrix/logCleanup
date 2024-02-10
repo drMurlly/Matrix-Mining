@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# mtime +0 will delete logs that are older than 24 hours use -amin, -atime, -cmin, -ctime, -mmin if you need to modify the time
+find /matrix/MatrixLog -type f -mtime +0 -name '*.log' -execdir rm -- '{}' \;
