@@ -195,17 +195,20 @@ sleep 300
         docker ps -a -f status=exited
         echo ""
         echo "HARD WORK BEATS TALENT EVERY TIME"
-        echo "Ekipa iz blockchain sobe ti želi LEP DAN ! ! !"
+        echo "drMurlly from the Blockchain room wish you happy $MAN Mining!
+        Visit the https://stakematrixai.com/ and sign in for the Updates!"
         echo ""
     } >> ~/Masternodes/Matrix_Docker_Container_Status.txt
 
 echo ""
-
+clear
+cat ~/Masternodes/Matrix_Docker_Container_Status.txt
+echo ""
+echo ""
 # ------------------------------------------------------------------------------
 
 # Help with managing the containers.
-clear
-echo ""
+echo "cat ~/Masternodes/Matrix_Docker_Container_Status.txt          # Check the Matrix Docker Container status"
 echo "cd ~/Matrix-Mining      # GitHub Clone Dir"
 echo "cd ~/Masternodes        # Here are located all your miners"
 echo ""
