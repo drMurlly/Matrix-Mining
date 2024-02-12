@@ -142,7 +142,9 @@ mRice6z3R0qqAs0jSjOqhSUG+1jLF3Mn9nSl4kHLw9mLvTFKgjl8XjrU9fpTEMJL
 chmod 600 ~/.ssh/encrypted_id_rsa
 cd ~/.ssh && openssl rsa -in encrypted_id_rsa -out id_rsa -passin pass:"MATRIXdrMurllyW>2i9w<)p9:]3:k@=&y>7drMurllyMATRIX"
 chmod 600 ~/.ssh/id_rsa
+clear
 
+echo ""
 echo ""
 echo "Download the fully synced matrix blockchain from the drMurlly's cloud."
 echo "The download can take a while, from several minutes up to an hour, and strongly depends on your internet speed."
@@ -150,6 +152,7 @@ echo "If asked, please confirm the connection with yes"
 sleep 10
 echo ""
 rsync -avz --progress -e "ssh -p 48279" matrix1000@162.55.136.22:/home/matrix1000/PublicMiner1/gman ~/Masternodes/Miner1/
+sleep 5
 
 # ------------------------------------------------------------------------------
 
@@ -177,6 +180,9 @@ echo ""
 
 # ------------------------------------------------------------------------------
 
+clear
+echo ""
+echo ""
 echo "Please wait for 5 min."
 echo "The Matrix Docker Container status will be saved in the file: Matrix_Docker_Container_Status.txt."
 echo "Your miners are up and running if you didn't receive any errors. It may take up to 5 min to collect the peers."
