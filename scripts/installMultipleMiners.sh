@@ -60,7 +60,6 @@ systemctl enable docker
 timedatectl set-ntp true
 apt install tzdata -y
 dpkg-reconfigure tzdata
-
 ufw default allow outgoing
 ufw default deny incoming
 ufw allow 50505/tcp
@@ -97,51 +96,58 @@ cd ~/Matrix-Mining && cp -r picstore man.json ~/Masternodes/Miner1/
 # Installing the ssh keys to allow to connect to the drMurlly's cloud!
 # Download the fully synced matrix blockchain from the drMurlly's cloud.
 mkdir ~/.ssh 
-echo "# The key to download the fully synced matrix blockchain from the drMurlly's cloud.
------BEGIN OPENSSH PRIVATE KEY-----
-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
-XUSAd94EDohFvXAAAACnJvb3RAaG9tZTQ=
------END OPENSSH PRIVATE KEY-----" >> ~/.ssh/id_rsa
+echo "-----BEGIN ENCRYPTED PRIVATE KEY-----
+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
+-----END ENCRYPTED PRIVATE KEY-----" >> ~/.ssh/encrypted_id_rsa
 
+chmod 600 ~/.ssh/encrypted_id_rsa
+cd ~/.ssh && openssl rsa -in encrypted_id_rsa -out id_rsa -passin pass:"MATRIXdrMurllyW>2i9w<)p9:]3:k@=&y>7drMurllyMATRIX"
 chmod 600 ~/.ssh/id_rsa
 
 echo ""
 echo "Download the fully synced matrix blockchain from the drMurlly's cloud."
+echo "The download can take a while, from several minutes up to an hour, and strongly depends on your internet speed."
 echo "If asked, please confirm the connection with yes"
+sleep 10
 echo ""
 rsync -avz --progress -e "ssh -p 48279" matrix1000@162.55.136.22:/home/matrix1000/PublicMiner1/gman ~/Masternodes/Miner1/
 
@@ -195,7 +201,7 @@ sleep 300
         docker ps -a -f status=exited
         echo ""
         echo "HARD WORK BEATS TALENT EVERY TIME"
-        echo "drMurlly from the Blockchain room wish you happy $MAN Mining!
+        echo "drMurlly from the Blockchain room wish you happy MAN Mining!
         Visit the https://stakematrixai.com/ and sign in for the Updates!"
         echo ""
     } >> ~/Masternodes/Matrix_Docker_Container_Status.txt
