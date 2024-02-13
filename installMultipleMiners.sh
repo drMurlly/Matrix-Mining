@@ -196,7 +196,7 @@ echo "alias doc='docker ps -a | grep Exit'" >> ~/.bashrc
 echo "alias doc1='docker ps -a | grep matrix'" >> ~/.bashrc
 echo ""
 echo "Aliases added to .bashrc successfully."
-sleep 1 && source ~/.bashrc
+sleep 2 && source ~/.bashrc
 
 # ------------------------------------------------------------------------------
 
@@ -250,7 +250,7 @@ echo "EXAMPLE for Miner1"
 echo "nano /root/Masternodes/Miner1/signAccount.json"
 echo ""
 echo "Change the address name with your B Wallet. Paste the content from Wallet B Keystore File. Save with Ctrl+s and Exit with Ctrl+x"
-echo "cd /root/Masternodes/Miner1/keysote && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG"
+echo "cd /root/Masternodes/Miner1/keystore && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG"
 echo " ------------------------------------------------------------------------"
 echo "Help with managing the containers."
 echo "cat ~/Masternodes/Matrix_Docker_Container_Status.txt          # Check the Matrix Docker Container status"
