@@ -36,8 +36,9 @@ fi
 # ------------------------------------------------------------------------------
 # Clone the drMurlly's GitHub repository.
 cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
-cd Matrix-Mining/matrix && chmod 755 gman logCleanup nodeConfig.sh
-cd Matrix-Mining/scripts && chmod 755 matrixCheck.sh && mv matrixCheck.sh matrixCheck && cp matrixCheck /usr/bin
+cd ~/Matrix-Mining/matrix && chmod 755 gman logCleanup nodeConfig.sh
+cd ~/Matrix-Mining/scripts && chmod 755 matrixCheck.sh && mv matrixCheck.sh matrixCheck && cp matrixCheck /usr/bin
+cd ~/Matrix-Mining/scripts && chmod 755 relaunchMiners.sh
 
 # ------------------------------------------------------------------------------
 # Download the Docker image from Docker Hub. 
@@ -89,7 +90,7 @@ cd ~/Masternodes
     done
 
 rm ~/Masternodes/signAccount.json
-cd ~/Matrix-Mining && cp -r picstore man.json ~/Masternodes/Miner1/
+cd ~/Matrix-Mining/matrix && cp -r picstore man.json ~/Masternodes/Miner1/
 
 
 # ------------------------------------------------------------------------------
@@ -159,13 +160,18 @@ sleep 5
 # Copy the blockchain data to all your miners.
 echo "Copy the blockchain data to all your miners."
 
-cd ~/Masternodes/Miner1
+cd ~/Masternodes
     for i in $(seq 2 $MAX_MINERJEV); do
-        cp gman picstore man.json Miner$i/
+        cp -r Miner1/gman Miner1/picstore Miner1/man.json Miner$i/
         echo "Copied the blockchain data to Miner$i"
     done
 echo ""
+
 # ------------------------------------------------------------------------------
+
+# Stop and remove the Docker containers, if you run the script multiple times.
+# docker stop Miner{1..30} 2>/dev/null && sleep 1
+# docker rm Miner{1..30} 2>/dev/null && sleep 1
 
 # Get the Docker containers up and running.
 echo "Get the Docker containers up and running." && sleep 1
@@ -174,9 +180,19 @@ cd ~/Masternodes || exit # Ensure we're in the right directory
     for dir in Miner*; do
         miner_number=$(echo "$dir" | grep -o -E '[0-9]+')
         port=$((50000 + miner_number))
-        sudo docker run --restart unless-stopped -d -e MAN_PORT="$port" -p "$port:$port" -v "~/Masternodes/$dir:/matrix/chaindata" --name "$dir" drmurlly/matrix
+        sudo docker run --restart unless-stopped -d -e MAN_PORT="$port" -p "$port:$port" -v "/root/Masternodes/$dir:/matrix/chaindata" --name "$dir" drmurlly/matrix
     done
 echo ""
+
+# ------------------------------------------------------------------------------
+
+# Append aliases to .bashrc
+echo "# Matrix Miner Aliasses" >> ~/.bashrc
+echo "alias doc='docker ps -a | grep Exit'" >> ~/.bashrc
+echo "alias doc1='docker ps -a | grep matrix'" >> ~/.bashrc
+echo ""
+echo "Aliases added to .bashrc successfully."
+sleep 1 && source ~/.bashrc
 
 # ------------------------------------------------------------------------------
 
@@ -238,10 +254,10 @@ echo ""
 echo "If you get an Error that some Ports are already in use and the Miner is not running, 
 you need to change the ports manually. The Example command is below."
 echo "Example Docker command to start the Miner1."
-echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v ~/Masternodes/Miner1:/matrix/chaindata --name Miner1 drmurlly/matrix"
+echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v /root/Masternodes/Miner1:/matrix/chaindata --name Miner1 drmurlly/matrix"
 echo ""
 echo "Example Docker command to start the Miner2."
-echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v ~/Masternodes/Miner2:/matrix/chaindata --name Miner2 drmurlly/matrix"
+echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v /root/Masternodes/Miner2:/matrix/chaindata --name Miner2 drmurlly/matrix"
 echo ""
 echo ""
 
