@@ -34,6 +34,10 @@ else
 fi
 
 # ------------------------------------------------------------------------------
+# Delete the working dorectories, in case you need to run installer multiple times.
+cd ~ && rm -r Matrix-Mining Masternodes 2>/dev/null
+
+# ------------------------------------------------------------------------------
 # Clone the drMurlly's GitHub repository.
 cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
 cd ~/Matrix-Mining/matrix && chmod 755 gman logCleanup nodeConfig.sh
@@ -196,13 +200,12 @@ sleep 1 && source ~/.bashrc
 
 # ------------------------------------------------------------------------------
 
-clear
 echo ""
 echo ""
-echo "Please wait for 5 min."
+echo "Please wait for 3 min."
 echo "The Matrix Docker Container status will be saved in the file: Matrix_Docker_Container_Status.txt."
 echo "Your miners are up and running if you didn't receive any errors. It may take up to 5 min to collect the peers."
-sleep 300
+sleep 180
 
     {
         echo ""
@@ -222,8 +225,10 @@ sleep 300
         echo "STOPED DOCKER CONTAINERS"
         docker ps -a -f status=exited
         echo ""
-        echo "HARD WORK BEATS TALENT EVERY TIME"
-        echo "drMurlly from the Blockchain room wish you happy MAN Mining!
+        echo ""
+        echo "HARD WORK BEATS TALENT EVERY TIME
+        
+        drMurlly from the Blockchain room wish you happy MAN Mining!
         Visit the https://stakematrixai.com/ and sign in for the Updates!"
         echo ""
     } >> ~/Masternodes/Matrix_Docker_Container_Status.txt
@@ -235,24 +240,29 @@ echo ""
 
 # ------------------------------------------------------------------------------
 echo ""
-# Help with managing the containers.
+echo " ------------------------------------------------------------------------"
+echo "Help with managing the containers."
 echo "cat ~/Masternodes/Matrix_Docker_Container_Status.txt          # Check the Matrix Docker Container status"
 echo "cd ~/Matrix-Mining      # GitHub Clone Dir"
 echo "cd ~/Masternodes        # Here are located all your miners"
+echo " ------------------------------------------------------------------------"
 echo ""
 echo "docker ps -a -f status=exited        # STOPED CONTAINERS"
 echo "docker ps -a | grep matrix           # RUNNING CONTAINERS"
 echo "docker info | head | tail -n6        # DOCKER CONTAINERS INFO"
+echo " ------------------------------------------------------------------------"
 echo ""
 echo "matrixCheck             # Check Mining, Syncing, Net_Status or Block_Number status"
 echo ""
+echo " ------------------------------------------------------------------------"
 echo "docker restart Miner{1..30}          # Restart all your Docker Containers (Restart Miners)"
 echo "docker stop Miner{1..30}             # Stop all your Docker Containers (Stop Miners)"
 echo "docker rm Miner{1..30}               # Delete all your Docker Containers (Stop Miners)"
+echo " ------------------------------------------------------------------------"
 echo ""
-
 echo "If you get an Error that some Ports are already in use and the Miner is not running, 
 you need to change the ports manually. The Example command is below."
+echo ""
 echo "Example Docker command to start the Miner1."
 echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v /root/Masternodes/Miner1:/matrix/chaindata --name Miner1 drmurlly/matrix"
 echo ""
@@ -261,6 +271,3 @@ echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:500
 echo ""
 echo ""
 
-# ------------------------------------------------------------------------------
-echo ""
-echo ""

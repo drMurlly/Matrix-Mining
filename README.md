@@ -101,6 +101,9 @@ There are two types of rewards generated: Staking and Mining rewards.
 Both types of rewards will be sent to Wallet A of each node. However, the staking rewards will remain locked as long as the staking is also locked, while mining rewards will be available and transferable at all times.   
 
 
+The fully synced matrix blockchain download from the drMurlly's cloud can take a while, from several minutes up to an hour, and strongly depends on your internet speed.
+
+
 ### Tips for Smooth Sailing
 Getting organized is half the battle won. Here's a simple way to keep your wallet files in check:   
    
@@ -118,9 +121,7 @@ Remember, a little prep now can save you a lot of headaches later. Happy mining!
    
    
 ### This script is basically all you need to run multiple miners in Docker containers.
-It'll handle everything for you. If you're familiar with using the terminal,
-you can technically set up multiple matrix masternodes with this script.
-It'll be a smoother experience if you know some basic Ubuntu commands.
+It'll handle everything for you. If you're familiar with using the terminal, you can technically set up multiple matrix masternodes with this script. It'll be a smoother experience if you know some basic Ubuntu commands.   
    
    
 Login as root.   
@@ -140,6 +141,10 @@ Just run the installer to set up the miners on your machine. You'll need to inpu
 Start the installer   
 `cd ~ && sudo ./installMultipleMiners.sh`   
    
+      
+I've updated the chain and set everything up so it's ready to go for you daily. This means you'll only need to sync a few hundred blocks to get to the latest one, and this synchronization should wrap up in about an hour.   
+   
+If the installer gets stuck during the download, or if your connection gets interrupted, no worries—just give the installer another run.   
    
 ### Help with managing the containers.
    
