@@ -104,7 +104,7 @@ Both types of rewards will be sent to Wallet A of each node. However, the stakin
 The fully synced matrix blockchain download from the drMurlly's cloud can take a while, from several minutes up to an hour, and strongly depends on your internet speed.
 
 
-### Tips for Smooth Sailing
+## Tips for Smooth Sailing
 Getting organized is half the battle won. Here's a simple way to keep your wallet files in check:   
    
 Set Up Your Folders: Start by making a folder named something like MN_21 on your laptop. Inside this folder, create two more folders named Wallet_A and Wallet_B. Remember back in step 7, when you created your wallets? Drag the Keystore file for each wallet into its respective folder. This little bit of organization goes a long way.   
@@ -120,7 +120,7 @@ Your Wallet, Your Responsibility: Educating yourself on creating and storing wal
 Remember, a little prep now can save you a lot of headaches later. Happy mining!   
    
    
-### This script is basically all you need to run multiple miners in Docker containers.
+# This script is basically all you need to run multiple miners in Docker containers.
 It'll handle everything for you. If you're familiar with using the terminal, you can technically set up multiple matrix masternodes with this script. It'll be a smoother experience if you know some basic Ubuntu commands.   
    
    
@@ -151,20 +151,37 @@ cd ~ && sudo ./installMultipleMiners.sh
 I've updated the chain and set everything up so it's ready to go for you daily. This means you'll only need to sync a few hundred blocks to get to the latest one, and this synchronization should wrap up in about an hour.   
    
 If the installer gets stuck during the download, or if your connection gets interrupted, no worries—just give the installer another run.   
+    
+       
+## Help with managing the containers.
    
-### Help with managing the containers.
+Shortcut to run the matrixCheck script   
+Check Mining, Syncing, Net_Status or Block_Number status   
+```   
+matrixCheck
+```   
    
-```
-# Shortcut to run the matrixCheck script
-matrixCheck                          # Check Mining, Syncing, Net_Status or Block_Number status
-   
-# Working Directories     
-cat ~/Masternodes/Matrix_Docker_Container_Status.txt      # Check the Matrix Docker Container status
-cd ~/Matrix-Mining                                        # GitHub Clone Dir
-cd ~/Masternodes                                          # Here are located all your miners
+Working Directories     
+Check the Matrix Docker Container status
+```    
+cat ~/Masternodes/Matrix_Docker_Container_Status.txt      
+```    
    
       
-# Docker help
+```    
+GitHub Clone Dir
+cd ~/Matrix-Mining
+```
+   
+      
+Here are located all your miners
+```   
+cd ~/Masternodes
+```   
+   
+      
+Docker help
+``` 
 doc                                  # SHOW THE STOPED CONTAINERS
 doc1                                 # SHOW THE RUNNING CONTAINERS
 docker ps -a -f status=exited        # SHOW THE STOPED CONTAINERS
@@ -173,18 +190,20 @@ docker info | head | tail -n6        # SHOW THE DOCKER CONTAINERS INFO
 docker restart Miner{1..30}          # Restart all your Docker Containers (Restart Miners)
 docker stop Miner{1..30}             # Stop all your Docker Containers (Stop Miners)
 docker rm Miner{1..30}               # Delete all your Docker Containers (Stop Miners)
+```    
    
+If you get an Error that some Ports are already in use and the Miner is not running, you need to change the ports manually. The Example command is below.   
    
-#If you get an Error that some Ports are already in use and the Miner is not running, you need to change the ports manually. The Example command is below.
-   
-# Example Docker command to start the Miner1.
+Example Docker command to start the Miner1.   
+```    
 sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v /root/Masternodes/Miner1:/matrix/chaindata --name Miner1 drmurlly/matrix
+```    
    
-# Example Docker command to start the Miner2.
+Example Docker command to start the Miner2.   
+```    
 sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v /root/Masternodes/Miner2:/matrix/chaindata --name Miner2 drmurlly/matrix
-      
-```
-
+```   
+   
          
 Docker containers tend to take up more space over time, which is just how Docker works – it's not a glitch or anything. If you're curious to dive deeper into how Docker operates, check out the official Docker documentation right here: https://docs.docker.com/   
    
@@ -210,7 +229,7 @@ Scroll down to the bottom and add this line, which schedules the containers to r
 ```   
    
 
-### Troubleshooting
+## Troubleshooting
 If some of your Miners don't get peers after 5 minutes, then try to execute the following script
 ```   
 cd ~/Matrix-Mining/scripts && ./relaunchMiners.sh
