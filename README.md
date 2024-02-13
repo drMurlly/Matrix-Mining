@@ -230,7 +230,7 @@ Docker containers tend to take up more space over time, which is just how Docker
    
 Here's the deal: to keep things running smoothly, we need to restart the containers regularly. This means doing it at least once a week. If your disk space is on the tighter side, you might even need to do it twice a week.   
    
-Here's how to set it up:   
+Here's how to set it up.   
     
 First, log in as the root user: 
 ```     
@@ -272,9 +272,9 @@ sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v 
     
 If you're having trouble connecting to peers, there are a couple of things you might want to try out.   
    
-Open Port number  50505 for UDP and TCP traffic. The port number must be available (open in your router and not already used by another process). The process differs for each user and depends on your internet provider and router. Just google how to do that.   
+First off, open Port number  50505 for UDP and TCP traffic. The port number must be available (open in your router and not already used by another process). The process differs for each user and depends on your internet provider and router. Just google how to do that.   
    
-First off, using a VPN could help – I've been using Mullvad myself (you can check it out here: https://mullvad.net/en). It's about 5€ a month, but totally worth it in my experience. It's really helped me sort out quite a few issues with my mining setup.   
+Using a VPN could help – I've been using Mullvad myself (you can check it out here: https://mullvad.net/en). It's about 5€ a month, but totally worth it in my experience. It's really helped me sort out quite a few issues with my mining setup.   
    
 The second thing is, your internet speed might be too slow, especially if you're trying to run a bunch of miners on a not-so-great connection. Or, even if your internet's decent, it might be too tied up with other stuff, leaving not enough bandwidth for your miners. Getting a faster internet connection, or scaling back on the number of miners, could make a big difference. For instance, with a 120 Mbit/s connection, you could comfortably run about 30 miners. With a 1 Gbit/sec connection, you could run several hundred, though that might bring up some other challenges that you'd need to deal with later.   
    
