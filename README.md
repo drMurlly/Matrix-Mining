@@ -161,7 +161,7 @@ nano /root/Masternodes/Miner1/signAccount.json
    
 EXAMPLE for Miner1 for KeyStore file   
 ```    
-cd /root/Masternodes/Miner1/keysote && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG
+cd /root/Masternodes/Miner1/keystore && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG
 ```    
 Change the address name with your B Wallet. Paste the content from the Wallet B Keystore File. Save with Ctrl+s and Exit with Ctrl+x. See the example in screenshot folder for additional help.   
    
@@ -285,7 +285,7 @@ Using a VPN could help – I've been using Mullvad myself (you can check it out 
 
 Your internet speed might be too slow, especially if you're trying to run a bunch of miners on a not-so-great connection. Or, even if your internet's decent, it might be too tied up with other stuff, leaving not enough bandwidth for your miners. Getting a faster internet connection, or scaling back on the number of miners, could make a big difference. For instance, with a 120 Mbit/s connection, you could comfortably run about 30 miners. With a 1 Gbit/sec connection, you could run several hundred, though that might bring up some other challenges that you'd need to deal with later.   
    
-   
+
 If you're still stuck, the official Telegram groups are a great place to seek help. Lots of folks there can offer advice. I've put quite a bit of time into the Matrix AI Network and really believe in it, but I can't offer one-on-one support all the time – I'm pretty swamped and can't be active in the Telegram groups all day. I do pop in from time to time to help with major issues though. If you've been trying to figure things out on your own for a day or so and still can't crack it, you'll have a bit of a priority for my help. But it's also important to try and work things out on your own a bit.
    
    
