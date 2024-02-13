@@ -52,6 +52,9 @@ docker pull drmurlly/matrix
 
 # Install all necessary dependencies, Docker, open up the needed ports, and copies matrixCheck to /usr/bin.
 apt-get update -y && apt-get upgrade -y
+timedatectl set-ntp true
+apt install tzdata -y
+dpkg-reconfigure tzdata
 apt-get install ufw -y rkhunter -y make -y aptitude -y
 apt-get install htop -y mc -y nload -y git-all -y
 apt-get install auditd -y hwinfo -y pydf -y sysstat -y
@@ -62,9 +65,6 @@ systemctl restart fail2ban
 apt install docker.io -y
 systemctl start docker
 systemctl enable docker
-timedatectl set-ntp true
-apt install tzdata -y
-dpkg-reconfigure tzdata
 ufw default allow outgoing
 ufw default deny incoming
 ufw allow 50505/tcp
@@ -270,4 +270,3 @@ echo "Example Docker command to start the Miner2."
 echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v /root/Masternodes/Miner2:/matrix/chaindata --name Miner2 drmurlly/matrix"
 echo ""
 echo ""
-

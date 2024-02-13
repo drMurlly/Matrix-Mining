@@ -125,10 +125,14 @@ It'll handle everything for you. If you're familiar with using the terminal, you
    
    
 Login as root.   
-`sudo -i`
+```   
+sudo -i
+```   
    
 Download the installer   
-`wget https://raw.githubusercontent.com/drMurlly/Matrix-Mining/main/installMultipleMiners.sh -O installMultipleMiners.sh && chmod +x installMultipleMiners.sh && nano installMultipleMiners.sh`   
+```   
+wget https://raw.githubusercontent.com/drMurlly/Matrix-Mining/main/installMultipleMiners.sh -O installMultipleMiners.sh && chmod +x installMultipleMiners.sh && nano installMultipleMiners.sh
+```   
       
        
 Please adjust the variable. >> MAX_MINERJEV=30 <<
@@ -139,7 +143,9 @@ Then press Ctrl+s to save and Ctrl+x to exit the nano editor.
 Just run the installer to set up the miners on your machine. You'll need to input a few things along the way.
    
 Start the installer   
-`cd ~ && sudo ./installMultipleMiners.sh`   
+```   
+cd ~ && sudo ./installMultipleMiners.sh
+```   
    
       
 I've updated the chain and set everything up so it's ready to go for you daily. This means you'll only need to sync a few hundred blocks to get to the latest one, and this synchronization should wrap up in about an hour.   
@@ -186,11 +192,15 @@ Here's the deal: to keep things running smoothly, we need to restart the contain
    
 Here's how to set it up:   
     
-First, log in as the root user:   
-`sudo -i`   
+First, log in as the root user: 
+```     
+sudo -i
+```      
    
 Then, open up your crontab (if it's your first time, go with the Nano editor when prompted):   
-`crontab -e`   
+```   
+crontab -e
+```   
    
 Scroll down to the bottom and add this line, which schedules the containers to restart twice a week – every Tuesday and Saturday at 9 AM:   
 ```   
@@ -202,10 +212,14 @@ Scroll down to the bottom and add this line, which schedules the containers to r
 
 ### Troubleshooting
 If some of your Miners don't get peers after 5 minutes, then try to execute the following script
-`cd ~/Matrix-Mining/scripts && ./relaunchMiners.sh`   
+```   
+cd ~/Matrix-Mining/scripts && ./relaunchMiners.sh
+```    
    
 Wait for 5 minutes and recheck the peers. With this command:   
-`matrixCheck`
+```   
+matrixCheck
+```   
    
      
 If just some miners don't get peers, try to stop, remove, and relaunch just those specific miners. Example for Miner1:
