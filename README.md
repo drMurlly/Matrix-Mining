@@ -153,6 +153,19 @@ I've updated the chain and set everything up so it's ready to go for you daily. 
 If the installer gets stuck during the download, or if your connection gets interrupted, press Ctrl+c one time, in some cases the installation will continue, if not no worries—just stop the installer and give him another run.   
     
        
+After successfully installing, you must place your Wallet B signAccount.json and keystore file in the appropriate place. See screenshots for help.   
+EXAMPLE for Miner1 for signAccount.json file   
+```    
+nano /root//Masternodes/Miner1/signAccount.json
+```    
+   
+EXAMPLE for Miner1 for KeyStore file   
+```    
+cd /root//Masternodes/Miner1/keysote && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG
+```    
+Change the address name with your B Wallet. Paste the content from the Wallet B Keystore File. Save with Ctrl+s and Exit with Ctrl+x. See the example in screenshot folder for additional help.   
+   
+   
 ## Help with managing the containers.
    
 Shortcut to run the matrixCheck script   
@@ -250,6 +263,8 @@ sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v 
    
     
 If you're having trouble connecting to peers, there are a couple of things you might want to try out.   
+   
+Open Port number  50505 for UDP and TCP traffic. The port number must be available (open in your router and not already used by another process). The process differs for each user and depends on your internet provider and router. Just google how to do that.   
    
 First off, using a VPN could help – I've been using Mullvad myself (you can check it out here: https://mullvad.net/en). It's about 5€ a month, but totally worth it in my experience. It's really helped me sort out quite a few issues with my mining setup.   
    
