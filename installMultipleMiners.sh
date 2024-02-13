@@ -174,8 +174,8 @@ echo ""
 # ------------------------------------------------------------------------------
 
 # Stop and remove the Docker containers, if you run the script multiple times.
-# docker stop Miner{1..30} 2>/dev/null && sleep 1
-# docker rm Miner{1..30} 2>/dev/null && sleep 1
+sudo docker stop Miner{1..30} 2>/dev/null && sleep 1
+sudo docker rm Miner{1..30} 2>/dev/null && sleep 1
 
 # Get the Docker containers up and running.
 echo "Get the Docker containers up and running." && sleep 1
