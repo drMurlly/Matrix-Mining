@@ -216,9 +216,9 @@ echo ""
 clear
 cat ~/Masternodes/Matrix_Docker_Container_Status.txt
 echo ""
-echo ""
-# ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------
+echo ""
 # Help with managing the containers.
 echo "cat ~/Masternodes/Matrix_Docker_Container_Status.txt          # Check the Matrix Docker Container status"
 echo "cd ~/Matrix-Mining      # GitHub Clone Dir"
@@ -235,26 +235,16 @@ echo "docker stop Miner{1..30}             # Stop all your Docker Containers (St
 echo "docker rm Miner{1..30}               # Delete all your Docker Containers (Stop Miners)"
 echo ""
 
-Echo "If you get an Error that some Ports are already in use and the Miner is not running, 
+echo "If you get an Error that some Ports are already in use and the Miner is not running, 
 you need to change the ports manually. The Example command is below."
 echo "Example Docker command to start the Miner1."
 echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50001 -p 50001:50001 -v ~/Masternodes/Miner1:/matrix/chaindata --name Miner1 drmurlly/matrix"
 echo ""
 echo "Example Docker command to start the Miner2."
 echo "sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v ~/Masternodes/Miner2:/matrix/chaindata --name Miner2 drmurlly/matrix"
-
+echo ""
+echo ""
 
 # ------------------------------------------------------------------------------
-# ADD THIS TO THE README.md
-wget https://raw.githubusercontent.com/drMurlly/Matrix-Mining/main/installMultipleMiners.sh -O installMultipleMiners.sh && chmod +x installMultipleMiners.sh && nano installMultipleMiners.sh
-
-
-Please adjust the variable. >> MAX_MINERJEV=30 <<
-How many miners do you want to run? Enter a number between 1 and 30.
-Each miner will need about 50 GB of disk storage and 2 GB of RAM.
-   
-Then press Ctrl+s to save and Ctrl+x to exit the nano editor.
-Just run the installer to set up the miners on your machine. You'll need to input a few things along the way.
-   
-Start the installer
-sudo ./installMultipleMiners.sh
+echo ""
+echo ""
