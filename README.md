@@ -97,13 +97,13 @@ you can technically set up multiple matrix masternodes with this script.
 It'll be a smoother experience if you know some basic Ubuntu commands.
    
    
-Login as root and   
+Login as root.   
 `sudo -i`
    
-Download the installer
-`wget https://raw.githubusercontent.com/drMurlly/Matrix-Mining/main/installMultipleMiners.sh -O installMultipleMiners.sh && chmod +x installMultipleMiners.sh && nano installMultipleMiners.sh`
-   
-    
+Download the installer   
+`wget https://raw.githubusercontent.com/drMurlly/Matrix-Mining/main/installMultipleMiners.sh -O installMultipleMiners.sh && chmod +x installMultipleMiners.sh && nano installMultipleMiners.sh`   
+      
+       
 Please adjust the variable. >> MAX_MINERJEV=30 <<
 How many miners do you want to run? Enter a number between 1 and 30.
 Each miner will need about 50 GB of disk storage and 2 GB of RAM.
@@ -111,8 +111,8 @@ Each miner will need about 50 GB of disk storage and 2 GB of RAM.
 Then press Ctrl+s to save and Ctrl+x to exit the nano editor.
 Just run the installer to set up the miners on your machine. You'll need to input a few things along the way.
    
-Start the installer
-`sudo ./installMultipleMiners.sh`
+Start the installer   
+`sudo ./installMultipleMiners.sh`   
    
    
 ### Help with managing the containers.
@@ -147,9 +147,9 @@ sudo docker run --restart unless-stopped -d -e MAN_PORT=50002 -p 50002:50002 -v 
 ```
    
 ### Troubleshooting
-Join the official Matrix AI Network Telegram groups for additional troubleshooting and conversation about mining, staking, or other topics.
-https://t.me/matrixainetwork      
-https://t.me/MatrixMasternodes    
+Join the official Matrix AI Network Telegram groups for additional troubleshooting and conversation about mining, staking, or other topics.      
+https://t.me/matrixainetwork         
+https://t.me/MatrixMasternodes       
    
        
 
