@@ -150,7 +150,7 @@ cd ~ && sudo ./installMultipleMiners.sh
       
 I've updated the chain and set everything up so it's ready to go for you daily. This means you'll only need to sync a few hundred blocks to get to the latest one, and this synchronization should wrap up in about an hour.   
    
-If the installer gets stuck during the download, or if your connection gets interrupted, no worries—just give the installer another run.   
+If the installer gets stuck during the download, or if your connection gets interrupted, press Ctrl+c one time, in some cases the installation will continue, if not no worries—just stop the installer and give the him another run.   
     
        
 ## Help with managing the containers.

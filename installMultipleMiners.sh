@@ -209,6 +209,10 @@ sleep 180
 
     {
         echo ""
+        date
+        hostname
+        echo ""
+        echo ""
         echo "MATRIX DOCKER CONTAINER STATUS"
         docker ps -a | grep matrix
         echo ""
