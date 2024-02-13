@@ -37,7 +37,7 @@ fi
 # Clone the drMurlly's GitHub repository.
 cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
 cd Matrix-Mining/matrix && chmod 755 gman logCleanup nodeConfig.sh
-cd Matrix-Mining/scripts && chmod 755 *.sh && mv matrixCheck.sh matrixCheck && cp matrixCheck /usr/bin
+cd Matrix-Mining/scripts && chmod 755 matrixCheck.sh && mv matrixCheck.sh matrixCheck && cp matrixCheck /usr/bin
 
 # ------------------------------------------------------------------------------
 # Download the Docker image from Docker Hub. 
