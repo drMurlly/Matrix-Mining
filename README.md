@@ -156,16 +156,24 @@ If the installer gets stuck during the download, or if your connection gets inte
 After successfully installing, you must place your Wallet B signAccount.json and keystore file in the appropriate place. See screenshots for help.   
 EXAMPLE for Miner1 for signAccount.json file   
 ```    
-nano /root//Masternodes/Miner1/signAccount.json
+nano /root/Masternodes/Miner1/signAccount.json
 ```    
    
 EXAMPLE for Miner1 for KeyStore file   
 ```    
-cd /root//Masternodes/Miner1/keysote && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG
+cd /root/Masternodes/Miner1/keysote && nano MAN.21aeEZssC2FGjUL3Jv6uTLtAjbCaG
 ```    
 Change the address name with your B Wallet. Paste the content from the Wallet B Keystore File. Save with Ctrl+s and Exit with Ctrl+x. See the example in screenshot folder for additional help.   
    
    
+Restart all your Docker Containers
+```     
+docker restart Miner{1..30}    
+```     
+   
+If the miners had peers, you are okay with waiting up to 36 hours for some of your newly deployed miners to be elected, and you will collect valuable MAN tokens.     
+    
+      
 ## Help with managing the containers.
    
 Shortcut to run the matrixCheck script   
