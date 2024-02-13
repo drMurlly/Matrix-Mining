@@ -112,7 +112,7 @@ Then press Ctrl+s to save and Ctrl+x to exit the nano editor.
 Just run the installer to set up the miners on your machine. You'll need to input a few things along the way.
    
 Start the installer   
-`sudo ./installMultipleMiners.sh`   
+`cd ~ && sudo ./installMultipleMiners.sh`   
    
    
 ### Help with managing the containers.
