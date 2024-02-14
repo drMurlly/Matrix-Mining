@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# installMultipleMiners.sh
 # Created by drMurlly
 # 11.02.2024
 
@@ -43,6 +44,7 @@ cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
 cd ~/Matrix-Mining/matrix && chmod 755 gman logCleanup nodeConfig.sh
 cd ~/Matrix-Mining/scripts && chmod 755 matrixCheck.sh && mv matrixCheck.sh matrixCheck && cp matrixCheck /usr/bin
 cd ~/Matrix-Mining/scripts && chmod 755 relaunchMiners.sh
+cd ~/Matrix-Mining/scripts && chmod 755 downloadTheFullySyncedChain.sh
 
 # ------------------------------------------------------------------------------
 # Download the Docker image from Docker Hub. 
@@ -142,7 +144,7 @@ tXO5v/V1othYCv9aHU5GjJAFaPY+Ug9kGkUU1v51rUdjd8nBk4Ft5WFK5wo3vqnI
 mRice6z3R0qqAs0jSjOqhSUG+1jLF3Mn9nSl4kHLw9mLvTFKgjl8XjrU9fpTEMJL
 4xj35LPGbYkDz8SrKo3y0AKXNBxkpsD4j1h6wfrlc6ckbJ6KDS27/IpL1Tc9GxOH
 8R9IQM05MTv3JdjJKbt+4ZBiyDbm1IIYFx6K/c4xShi6
------END ENCRYPTED PRIVATE KEY-----" >> ~/.ssh/encrypted_id_rsa
+-----END ENCRYPTED PRIVATE KEY-----" > ~/.ssh/encrypted_id_rsa
 
 chmod 600 ~/.ssh/encrypted_id_rsa
 cd ~/.ssh && openssl rsa -in encrypted_id_rsa -out id_rsa -passin pass:"MATRIXdrMurllyW>2i9w<)p9:]3:k@=&y>7drMurllyMATRIX"

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# matrixCheck.sh
+# Created by drMurlly
+# 11.02.2024
+
+# Check Mining, Syncing, Net_Status or Block_Number status.
+
+
 function lb(){
         printf "\n"
 }
