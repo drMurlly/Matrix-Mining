@@ -10,10 +10,17 @@ To get access to the latest scripts, you need to clone the drMurlly's GitHub rep
 cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
 ```    
    
+In case you get following error      
+fatal: destination path 'Matrix-Mining' already exists and is not an empty directory.   
+Remove the already existing directory with following command   
+```    
+cd ~ && rm -r Matrix-Mining
+```    
+   
       
 ### downloadTheFullySyncedChain.sh
 The scripts download the Fully Synced Matrix Blockchain from drMurlly's cloud.    
-You can use this script if you have already been running the mining controller nodes and want to update the chain with a new snapshot.    
+You can use this script if you have already been running the mining masternodes and want to update the chain with a new snapshot.    
    
 Run the script with following command   
 ```    
