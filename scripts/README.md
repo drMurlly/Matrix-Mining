@@ -52,7 +52,7 @@ Matrix AI Network (MAN): MAN.3HZg7LqXDJZ9N7wXen8c4YU62i1pr
 Ethereum Network (ETH): 0xFd67f3eCA92C1cCB0c46b0D915B7aa0110ad07cC    
 Bitcoin Network (BTC): bc1qxnrz7vr0fedppcqkw62xey5sax9m976ksfyhge    
    
-Try out the Matrix AI Network BrainWave. He knows a lot about Matrix AI Network!    
+Try out the Matrix AI Network BrainWave bot. He knows a lot about Matrix AI Network!    
 https://brainwave.stakematrixai.com/   
 
 

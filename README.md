@@ -292,8 +292,23 @@ If you're still stuck, the official Telegram groups are a great place to seek he
 Join the official Matrix AI Network Telegram groups for additional troubleshooting and conversation about mining, staking, or other topics.      
 https://t.me/matrixainetwork         
 https://t.me/MatrixMasternodes       
-   
+      
        
+# Support my FREE work!  
+If you find these scripts helpful and you save some time and stress. 
+Please buy me a Coffee on my page!    
+https://stakematrixai.com/
+   
+Or leave a tip   
+Matrix AI Network (MAN): MAN.3HZg7LqXDJZ9N7wXen8c4YU62i1pr    
+Ethereum Network (ETH): 0xFd67f3eCA92C1cCB0c46b0D915B7aa0110ad07cC    
+Bitcoin Network (BTC): bc1qxnrz7vr0fedppcqkw62xey5sax9m976ksfyhge    
+   
+Try out the Matrix AI Network BrainWave bot. He knows a lot about Matrix AI Network!    
+https://brainwave.stakematrixai.com/   
+   
+     
+    
 ### Disclaimer   
 The information provided here is intended solely for informational purposes. The content presented reflects data collected from various sources and is subject to change without notice. While every effort has been made to ensure the accuracy and reliability of the information, we do not guarantee the completeness, accuracy, or reliability of the content.This DOCS does not constitute financial or investment advice and should not be interpreted as a recommendation to buy, sell, or hold any cryptocurrency, token, or investment instrument. Any decisions made based on the information provided in this DOCS are made at your own risk. Always conduct thorough research and consult with qualified financial advisors before making any investment decisions. The Matrix AI Network, its ecosystem, and the blockchain industry are subject to rapid technological developments, regulatory changes, and market dynamics that can impact the accuracy of the information presented. Any historical data, past performance, or future projections mentioned in this DOCS are not indicative of future results. We disclaim any liability for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with the use of this DOCS or reliance on the information provided. Readers are advised to verify the information independently and exercise caution when interpreting the data. By accessing and using this DOCS, you agree to these terms and acknowledge that you are solely responsible for your own decisions and actions.   
    
