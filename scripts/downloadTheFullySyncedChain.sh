@@ -82,7 +82,15 @@ echo ""
 rsync -avz --progress -e "ssh -p 48279" matrix1000@162.55.136.22:/home/matrix1000/PublicMiner1/gman ~/FullySyncedChain/
 sleep 5
 
-clear && cd ~/FullySyncedChain/ && ls -lha
+clear
+echo "After changing your gman directories by your miners, remember to delete unused chan you downloaded. That will save some space."
+echo ""
+echo "cd ~ && rm -r FullySyncedChain"
+
+
+echo ""
+echo ""
+cd ~/FullySyncedChain/ && ls -lha
 
 # ------------------------------------------------------------------------------
 
