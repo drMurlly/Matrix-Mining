@@ -12,7 +12,7 @@ cd ~ && git clone https://github.com/drMurlly/Matrix-Mining.git
    
       
 ### downloadTheFullySyncedChain.sh
-The scripts download the Fully Synced Matrix Blockchain from dr Murlly's cloud.    
+The scripts download the Fully Synced Matrix Blockchain from drMurlly's cloud.    
 You can use this script if you have already been running the mining controller nodes and want to update the chain with a new snapshot.    
    
 Run the script with following command   

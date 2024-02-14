@@ -79,8 +79,10 @@ echo "The download can take a while, from several minutes up to an hour, and str
 echo "If asked, please confirm the connection with yes"
 sleep 10
 echo ""
-rsync -avz --progress -e "ssh -p 48279" matrix1000@162.55.136.22:/home/matrix1000/PublicMiner1/gman ~/FullySyncedChain/gman
+rsync -avz --progress -e "ssh -p 48279" matrix1000@162.55.136.22:/home/matrix1000/PublicMiner1/gman ~/FullySyncedChain/
 sleep 5
+
+clear && cd ~/FullySyncedChain/ && ls -lha
 
 # ------------------------------------------------------------------------------
 
